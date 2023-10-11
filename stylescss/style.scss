@@ -4,11 +4,12 @@
     box-sizing: border-box;
 }
 
+//Variables
 $color-principal: rgba(39, 68, 231, 0.911);
-$color-gradiante: linear-gradient(to bottom, rgba(39, 68, 231, 0.911), white );
+$color-gradiante: linear-gradient(to bottom, rgba(39, 68, 231, 0.911), white);
 $color-secundario: rgb(194, 190, 226);
 
-%titulos{
+%titulos {
     background: $color-gradiante;
     font-size: 60px;
     color: white;
@@ -17,14 +18,16 @@ $color-secundario: rgb(194, 190, 226);
     display: block;
     text-align: center;
 }
+
 body {
     background-color: white;
-
+    min-height: 100vh;
 }
+
+//Encabezado
 
 .encabezado {
     nav {
-
         padding: 5px;
         background-color: $color-secundario;
         opacity: 0.8;
@@ -39,7 +42,7 @@ body {
             }
 
             a {
-                
+
                 color: white;
                 text-decoration: none;
                 font-size: 20px;
@@ -47,8 +50,9 @@ body {
         }
     }
 
-    .navbar {
+    //Barra de Navegacion
 
+    .navbar {
         background-color: $color-principal;
         padding: 30px;
 
@@ -63,41 +67,13 @@ body {
     }
 }
 
-.juntos {
-    h2 {
-       @extend %titulos;
-    }
-}
-
-.experiencia {
-    width: 100%;
-    display: flex;
-    color: rgba(253, 79, 48, 0.911);
-
-    div {
-        margin: 50px 100px;
-        width: 100%;
-        text-align: center;
-
-        p {
-            font-size: 20px;
-            color: gray;
-        }
-    }
-}
+//Main
 
 main {
-
-    div {
-        h3 {
-            background-color: $color-secundario;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            color: rgba(39, 68, 231, 0.911);
-            padding: 25px;
-            text-align: center;
-            font-size: 30px;
+    .juntos {
+        h2 {
+            @extend %titulos;
         }
-
     }
 
     section {
@@ -120,24 +96,193 @@ main {
         text-align: center;
     }
 
-    h2 { 
+    h2 {
         @extend %titulos;
     }
-}
 
-
-.empresas {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    div {
-        padding: 30px;
-        margin: 50px 100px;
+    h3 {
+        font-size: 40px;
+        background-color: $color-secundario;
+        padding: 20px;
+        text-align: center;
+        color: $color-principal;
     }
-}
 
+    .experiencia {
+        width: 100%;
+        display: flex;
+        color: rgba(253, 79, 48, 0.911);
+
+        div {
+            margin: 50px 100px;
+            width: 100%;
+            text-align: center;
+
+            p {
+                font-size: 20px;
+                color: gray;
+            }
+        }
+    }
+    .empresas {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        div {
+            padding: 30px;
+            margin: 50px 100px;
+        }
+    }   
+    //Cards Bootstrap
+    .mb-3 {
+        padding-top: 10px;
+        font-size: 28px;
+        color: $color-principal;
+        input {
+            background-color: $color-secundario;
+            color: $color-principal;
+        }
+        textarea {
+            background-color: $color-secundario;
+            color: $color-principal;
+        }
+    }
+    .btn-primary {
+        width: 200px;
+        margin-bottom: 20px;
+    }
+    //Fin cards bootstrap
+    
+    //Page- Nosotros
+    .sobre {
+        display: flex;
+        justify-content: space-around;
+        padding: 15px;
+    
+        div {
+            background-color: $color-secundario;
+            color: $color-principal;
+        }
+    
+    }
+    //Fin Page - Nosotros
+
+    //Page - pagos
+    .pagos {
+        div {
+            text-align: center;
+            color: $color-principal;
+            font-size: 10px;
+    
+            p {
+                font-size: 20px;
+                padding: 20px;
+            }
+        }
+    
+    }
+    //Fin Page - pagos
+
+    //Page - Destinos
+    .turismo {
+        display: grid;
+    
+        grid-template-areas:
+            "destino1 destino2 destino3"
+            "destino4 destino5 destino6";
+    
+    
+        .destino1 {
+            grid-area: destino1;
+    
+            h3 {
+                border: 1px solid $color-principal;
+                border-radius: 10px;
+                background-color: $color-principal;
+                color: white;
+                font-weight: 800;
+                margin: 20px;
+                padding: 5px;
+            }
+    
+        }
+        .destino2 {
+            grid-area: destino2;
+    
+            h3 {
+                border: 1px solid $color-principal;
+                border-radius: 10px;
+                background-color: $color-principal;
+                color: white;
+                font-weight: 800;
+                margin: 20px;
+                padding: 5px;
+            }
+        }
+        .destino3 {
+            grid-area: destino3;
+    
+            h3 {
+                border: 1px solid $color-principal;
+                border-radius: 10px;
+                background-color: $color-principal;
+                color: white;
+                font-weight: 800;
+                margin: 20px;
+                padding: 5px;
+            }
+        }
+        .destino4 {
+            grid-area: destino4;
+    
+            h3 {
+                border: 1px solid $color-principal;
+                border-radius: 10px;
+                background-color: $color-principal;
+                color: white;
+                font-weight: 800;
+                margin: 20px;
+                padding: 5px;
+            }
+        }
+    
+        .destino5 {
+            grid-area: destino5;
+    
+            h3 {
+                border: 1px solid $color-principal;
+                border-radius: 10px;
+                background-color: $color-principal;
+                color: white;
+                font-weight: 800;
+                margin: 20px;
+                padding: 5px;
+            }
+        }
+    
+        .destino6 {
+            grid-area: destino6;
+    
+            h3 {
+                border: 1px solid $color-principal;
+                border-radius: 10px;
+                background-color: $color-principal;
+                color: white;
+                font-weight: 800;
+                margin: 20px;
+                padding: 5px;
+            }
+        }
+    }
+     //Fin Page - Destinos
+}
+//Fin de Main
+
+
+//Inicio footer
 .pie {
+
     padding-top: 20px;
     display: grid;
     font-size: 20px;
@@ -183,98 +328,9 @@ main {
 
     }
 }
+//Fin de footer
 
 
-.mb-3 {
-    padding-top: 10px;
-    font-size: 28px;
-    color: $color-principal;
-
-    input {
-        background-color: $color-secundario;
-        color: $color-principal;
-    }
-
-    textarea {
-        background-color: $color-secundario;
-        color: $color-principal;
-    }
-
-}
-
-.btn-primary {
-    width: 200px;
-    margin-bottom: 20px;
-}
-
-.medios {
-    h2 {
-        background-color: $color-secundario;
-        margin: 0 0 30px 0;
-        padding: 150px 0 20px
-    }
-}
-
-.sobre {
-    display: flex;
-    justify-content: space-around;
-    padding: 15px;
-
-    div {
-        background-color: $color-secundario;
-        color: $color-principal;
-    }
-
-}
-
-.pagos {
-    div {
-        text-align: center;
-        color: $color-principal;
-        font-size: 10px;
-
-        p {
-            font-size: 20px;
-            padding: 20px;
-        }
-    }
-
-}
-
-.turismo {
-   @extend %titulos;
-    grid-template-areas:
-        "destino1 destino2 destino3"
-        "destino4 destino5 destino6";
-
-    .destino1 {
-        grid-area: destino1;
-    }
-
-    .destino1 {
-        grid-area: destino1;
-    }
-
-    .destino2 {
-        grid-area: destino2;
-    }
-
-    .destino3 {
-        grid-area: destino3;
-    }
-
-    .destino4 {
-        grid-area: destino4;
-    }
-
-    .destino5 {
-        grid-area: destino5;
-    }
-
-    .destino6 {
-        grid-area: destino6;
-    }
-}
 
 @media screen and (max-width: 425px) {
     .experiencia {
