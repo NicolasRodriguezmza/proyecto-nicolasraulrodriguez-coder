@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  max-height: 100vh;
 }
 
 main h2, main .juntos h2 {
@@ -16,7 +17,7 @@ main h2, main .juntos h2 {
 
 body {
   background-color: white;
-  min-height: 100vh;
+  max-height: 100vh;
 }
 
 .encabezado nav {
@@ -144,6 +145,7 @@ main .turismo .destino1 h3 {
   font-weight: 800;
   margin: 20px;
   padding: 5px;
+  opacity: 0.8;
 }
 main .turismo .destino2 {
   grid-area: destino2;
@@ -156,6 +158,7 @@ main .turismo .destino2 h3 {
   font-weight: 800;
   margin: 20px;
   padding: 5px;
+  opacity: 0.8;
 }
 main .turismo .destino3 {
   grid-area: destino3;
@@ -168,6 +171,7 @@ main .turismo .destino3 h3 {
   font-weight: 800;
   margin: 20px;
   padding: 5px;
+  opacity: 0.8;
 }
 main .turismo .destino4 {
   grid-area: destino4;
@@ -180,6 +184,7 @@ main .turismo .destino4 h3 {
   font-weight: 800;
   margin: 20px;
   padding: 5px;
+  opacity: 0.8;
 }
 main .turismo .destino5 {
   grid-area: destino5;
@@ -192,6 +197,7 @@ main .turismo .destino5 h3 {
   font-weight: 800;
   margin: 20px;
   padding: 5px;
+  opacity: 0.8;
 }
 main .turismo .destino6 {
   grid-area: destino6;
@@ -204,6 +210,26 @@ main .turismo .destino6 h3 {
   font-weight: 800;
   margin: 20px;
   padding: 5px;
+  opacity: 0.8;
+}
+main form .mb-3 {
+  text-align: center;
+}
+main form .mb-3 input {
+  height: 70px;
+}
+main form .mb-3 .form-control {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+main form .btn-primary {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  height: 50px;
 }
 
 .pie {
@@ -244,6 +270,9 @@ main .turismo .destino6 h3 {
 }
 
 @media screen and (max-width: 425px) {
+  .juntos {
+    font-size: 100px;
+  }
   .experiencia {
     display: flex;
     flex-direction: column;
